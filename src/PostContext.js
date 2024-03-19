@@ -47,4 +47,11 @@ function PostProvider({ children }) {
   );
 }
 
-export { PostProvider, PostContext };
+// custom hook
+
+function usePosts() {
+  const context = useContext(PostContext);
+  return context;
+}
+
+export { PostProvider, usePosts };
